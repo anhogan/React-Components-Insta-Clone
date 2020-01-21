@@ -46,7 +46,7 @@
 
 .like-section-wrapper {
   height: 10px;
-  width: 10px;
+  width: 5%;
   margin: 10px;
 }
 
@@ -61,7 +61,7 @@
 
 .like-number {
   width: 100px;
-  margin: 15px 0px;
+  margin: 15px 0px 5px 0px;
   font-size: 16px;
   text-align: center;
 }
