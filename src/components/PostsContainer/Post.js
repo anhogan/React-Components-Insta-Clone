@@ -7,10 +7,23 @@ import "./Posts.css";
 
 const Post = props => {
   const [likes, setLikes] = useState(props.post.likes);
+  const [timestamp] = useState(props.post.timestamp);
 
   const addLikes = () => {
     setLikes(likes + 1);
   };
+
+  // const setTimestamp = () => {
+  //   let month = timestamp.getMonth();
+  //   let day = timestamp.getDate();
+  //   let year = timestamp.getFullYear();
+
+  //   console.log(month);
+  //   console.log(day);
+  //   console.log(year);
+
+  //   return `{month} {day}, {year}`;
+  // }
 
   return (
     <div className="post-border">
@@ -32,7 +45,7 @@ const Post = props => {
         postId={props.post.imageUrl}
         comments={props.post.comments}
       />
-      <p className="date-added">{props.post.timestamp}</p>
+      <p className="date-added">{timestamp}</p>
     </div>
   );
 };
