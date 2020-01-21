@@ -32,7 +32,7 @@ const Post = props => {
         postId={props.post.imageUrl}
         comments={props.post.comments}
       />
-      <p>{props.post.timestamp}</p>
+      <p className="date-added">{props.post.timestamp}</p>
     </div>
   );
 };
