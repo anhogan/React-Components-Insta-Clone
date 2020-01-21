@@ -9,10 +9,10 @@ import "./Posts.css";
 
 const Post = props => {
   // set up state for the likes
-  const [like, setLike] = useState(0);
+  const [likes, setLikes] = useState(0);
 
-  const addLike = () => {
-    setLike(like => like + 1);
+  const addLikes = () => {
+    setLikes(likes => likes + 1);
   };
 
   return (
@@ -30,7 +30,7 @@ const Post = props => {
           src={props.post.imageUrl}
         />
       </div>
-      <LikeSection onClick={addLike}/>
+      <LikeSection onClick={addLikes} likes={likes}/>
       <CommentSection
         postId={props.post.imageUrl}
         comments={props.post.comments}
