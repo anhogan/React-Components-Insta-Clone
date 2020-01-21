@@ -7,22 +7,14 @@ import "./Comment.css";
 const CommentSection = props => {
   const [comment] = useState(props.comments);
   const [timestamp] = useState(props.timestamp);
-
-  // const abbrvTime = timestamp => {
-  //   let date = new Date(timestamp);
-  //   console.log(date);
-  //   let day = date.getDate();
-  //   console.log(day);
-  //   let month = date.getMonth();
-  //   let year = date.getFullYear();
-
-  //   return `${month} ${day}, ${year}`;    
-  // }
+  
+  const splitTime = timestamp.split(" ").splice(0,3).join(" ").split(",");
+  const timeStamp = splitTime[0];
 
   return (
     <div>
       {comment.map((comment) => <Comment comment={comment} />)}
-      <p className="date-added">{timestamp}</p>
+      <p className="date-added">{timeStamp}</p>
       <CommentInput />
     </div>
   );
