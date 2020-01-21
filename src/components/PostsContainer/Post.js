@@ -6,7 +6,7 @@ import PostHeader from "./PostHeader";
 import "./Posts.css";
 
 const Post = props => {
-  const [likes, setLikes] = useState(0);
+  const [likes, setLikes] = useState(props.post.likes);
 
   const addLikes = () => {
     setLikes(likes + 1);
@@ -32,6 +32,7 @@ const Post = props => {
         postId={props.post.imageUrl}
         comments={props.post.comments}
       />
+      <p>{props.post.timestamp}</p>
     </div>
   );
 };
