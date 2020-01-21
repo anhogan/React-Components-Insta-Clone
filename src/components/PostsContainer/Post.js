@@ -12,7 +12,7 @@ const Post = props => {
   const [likes, setLikes] = useState(0);
 
   const addLikes = () => {
-    setLikes(likes => likes + 1);
+    setLikes(likes + 1);
   };
 
   return (
@@ -30,7 +30,7 @@ const Post = props => {
           src={props.post.imageUrl}
         />
       </div>
-      <LikeSection onClick={addLikes} likes={likes}/>
+      <LikeSection addLikes={addLikes} likes={likes}/>
       <CommentSection
         postId={props.post.imageUrl}
         comments={props.post.comments}
