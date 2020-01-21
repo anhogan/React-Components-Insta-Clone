@@ -8,7 +8,7 @@
 }
 .comment-form  {
   margin: 10px 0;
-  width: 100%;
+  width: 95%;
 }
 .comment-form input {
   width: 100%;
@@ -17,6 +17,7 @@
   border: none;
   border-top: 1px solid #efefef;
   color: #999;
+  background: #fafafa;
 }
 .user {
   font-size: 14px;

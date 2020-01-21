@@ -6,10 +6,13 @@ import "./Comment.css";
 
 const CommentSection = props => {
   const [comment] = useState(props.comments);
+  const [timestamp] = useState(props.timestamp);
 
   return (
     <div>
       {comment.map((comment) => <Comment comment={comment} />)}
+      <p className="date-added">{timestamp}</p>
+      <CommentInput />
     </div>
   );
 };
