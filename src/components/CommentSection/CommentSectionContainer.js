@@ -8,6 +8,17 @@ const CommentSection = props => {
   const [comment] = useState(props.comments);
   const [timestamp] = useState(props.timestamp);
 
+  // const abbrvTime = timestamp => {
+  //   let date = new Date(timestamp);
+  //   console.log(date);
+  //   let day = date.getDate();
+  //   console.log(day);
+  //   let month = date.getMonth();
+  //   let year = date.getFullYear();
+
+  //   return `${month} ${day}, ${year}`;    
+  // }
+
   return (
     <div>
       {comment.map((comment) => <Comment comment={comment} />)}

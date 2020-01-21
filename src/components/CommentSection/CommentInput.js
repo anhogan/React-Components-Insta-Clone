@@ -9,6 +9,7 @@ const CommentInput = props => {
         placeholder="Add a comment... "
         onChange={props.changeComment}
       />
+      <i className="fas fa-ellipsis-h"></i>
     </form>
   );
 };
