@@ -7,6 +7,7 @@ import "./Comment.css";
 const CommentSection = props => {
   const [comment] = useState(props.comments);
   const [timestamp] = useState(props.timestamp);
+  console.log(timestamp);
 
   return (
     <div>
