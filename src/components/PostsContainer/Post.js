@@ -12,7 +12,7 @@ const Post = props => {
   const [like, setLike] = useState(0);
 
   const addLike = () => {
-    setLike(like + 1);
+    setLike(like => like + 1);
   };
 
   return (
