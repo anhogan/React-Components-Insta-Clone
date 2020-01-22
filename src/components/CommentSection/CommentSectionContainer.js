@@ -5,11 +5,16 @@ import Comment from "./Comment";
 import "./Comment.css";
 
 const CommentSection = props => {
-  // Add state for the comments
+  const [comment] = useState(props.comments);
+  const [timestamp] = useState(props.timestamp);
+  
+  const splitTime = timestamp.split(" ").splice(0,3).join(" ").split(",");
+  const timeStamp = splitTime[0];
 
   return (
     <div>
-      {/* map through the comments data and return the Comment component */}
+      {comment.map((comment) => <Comment comment={comment} />)}
+      <p className="date-added">{timeStamp}</p>
       <CommentInput />
     </div>
   );
